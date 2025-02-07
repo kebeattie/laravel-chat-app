@@ -14,8 +14,6 @@ class ChatList extends Component
     public function mount(): void
     {
         $this->conversations = Conversations::where('sender_id', auth()->id())->get();
-//        dd($this->conversations);
-
 
     }
     public function render(): View
