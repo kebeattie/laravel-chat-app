@@ -17,4 +17,9 @@ class Messages extends Model
         return $this->belongsTo(User::class, 'receiver_id');
     }
 
+    public function sender(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'sender_id');
+    }
+
 }

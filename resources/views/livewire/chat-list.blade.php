@@ -12,8 +12,8 @@
 
                     <!-- Text Section -->
                     <div class="flex flex-col">
-                        <span class="text-white font-medium">{{ $conversation->messages()->first()->receiver->name }}</span>
-                        <span class="text-sm text-gray-300">{{ $conversation->messages()->first()->message }}</span>
+                        <span class="text-white font-medium">{{ $this->getChatPartner($conversation) }}</span>
+                        <span class="text-sm text-gray-300">{{ $this->displayMessage }}</span>
                     </div>
                 </div>
             @else
