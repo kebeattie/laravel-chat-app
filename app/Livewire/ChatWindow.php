@@ -11,14 +11,7 @@ class ChatWindow extends Component
 {
     public Conversations $conversation;
     public $messages;
-    public $newMessage;
 
-    public function sendMessage(): void
-    {
-        Messages::create([
-            'message' => $this->newMessage,
-        ]);
-    }
     public function mount($conversationId): void
     {
         $this->conversation = Conversations::find($conversationId);
